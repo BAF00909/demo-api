@@ -1,0 +1,53 @@
+{
+  "name": "demo-api",
+  "version": "1.0.0",
+  "description": "demo api in ts",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node ./dist/main.js",
+    "dev": "nodemon",
+    "dev:inspect": "nodemon -e ts,json --exec node --inspect=localhost:9222 -r ts-node/register src/main.ts",
+    "generate": "prisma generate",
+    "build": "tsc",
+    "lint": "eslint ./src/**",
+    "lint:fix": "eslint ./src/** --fix",
+    "test": "jest",
+    "test:e2e": "jest --config jest.e2e.config.ts --coverage"
+  },
+  "author": "Aleksandr Breus",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^4.12.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "inversify": "^6.0.1",
+    "jsonwebtoken": "^9.0.0",
+    "reflect-metadata": "^0.1.13",
+    "tslog": "^4.8.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.0",
+    "@types/jsonwebtoken": "^9.0.1",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7",
+    "prisma": "^4.12.0",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3"
+  }
+}
